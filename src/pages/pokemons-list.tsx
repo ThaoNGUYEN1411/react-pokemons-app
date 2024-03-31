@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { FunctionComponent} from 'react'
 import { PokemonCard } from '../components/pokemon-card';
 import usePokemons from '../hooks/pokemon-hooks';
 
 export const PokemonsList: FunctionComponent = () => {
-
+//si deux composents utilisent la meme hook, ils auraient 2 etats diffirents
   const pokemons = usePokemons();
 
   return (
