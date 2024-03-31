@@ -10,7 +10,7 @@ type Params = { id: string };
 
 //RouteComponentProps pour defini le type de params recu depuis la route
 //objet match qui contient tous les donnés qui passe par toute  
-const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) => {
+const PokemonDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) => {
 
     //state type pokemon ou null, par defalt null
   const [pokemon, setPokemon] = useState<Pokemon|null>(null);
@@ -77,4 +77,4 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
   );
 }
   
-export default PokemonsDetail;
+export default PokemonDetail;
