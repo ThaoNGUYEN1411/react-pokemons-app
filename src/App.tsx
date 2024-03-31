@@ -3,6 +3,7 @@ import { PokemonsList } from './pages/pokemons-list';
 import { BrowserRouter, BrowserRouter as Link, Route, Router, Switch } from 'react-router-dom';
 import PokemonDetail from './pages/pokemon-detail';
 import PageNotFound from './pages/pokemon-not-found';
+import PokemonEdit from './pages/pokemon-edit';
   //FC function  components, utilise function flechée
 const App: FunctionComponent = () => {
 
@@ -20,6 +21,7 @@ const App: FunctionComponent = () => {
      <Switch>
       <Route exact path="/" component={PokemonsList} />
       <Route exact path="/pokemons" component={PokemonsList} />
+      <Route exact path="/pokemons/edit/:id" component={PokemonEdit} />
       <Route exact path="/pokemons/:id" component={PokemonDetail} />
       <Route component={PageNotFound} />
      </Switch>

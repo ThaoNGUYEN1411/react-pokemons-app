@@ -3,7 +3,7 @@ import Pokemon from '../models/pokemon';
 import  formatDate  from '../helpers/format-date';
 import './pokemon-card.css';
 import formatType from '../helpers/format-type';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 //declarer type de props
 
 type Props = {
@@ -31,7 +31,10 @@ export const PokemonCard:FunctionComponent<Props> = ({pokemon, borderColor="#009
     // rome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
 <div className='col s6 m4' key={pokemon.id} onClick={()=>gotoPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideBorder} >
       <div className='card horizontal' style={{borderColor:color}}>
-        <div className='card-image'><img src={pokemon.picture} alt={pokemon.name} /></div>
+        <div className='card-image'>
+          <img src={pokemon.picture} alt={pokemon.name} />
+          
+        </div>
           <div>
             <div className="card-stacked">
             <div className='card-content'>
