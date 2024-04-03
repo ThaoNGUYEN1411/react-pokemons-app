@@ -1,19 +1,22 @@
 import React, {FunctionComponent} from 'react';
 import { PokemonsList } from './pages/pokemons-list';
-import { BrowserRouter, BrowserRouter as Link, Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import PokemonDetail from './pages/pokemon-detail';
 import PageNotFound from './pages/pokemon-not-found';
 import PokemonEdit from './pages/pokemon-edit';
+
+
+
   //FC function  components, utilise function flechée
 const App: FunctionComponent = () => {
 
  return (
-  <BrowserRouter>
-  {/* <Router> */}
+  // <BrowserRouter>
+  <Router>
     <div>
     {/* La barre de navigation commun à tous les pages*/}
     <nav>
-      <div className='nav-wrapper teal'>
+      <div className='nav-wrapper teal center'>
         <Link to="/" className='brand-logo center'>Pokédex</Link>
       </div>
     </nav>
@@ -26,8 +29,8 @@ const App: FunctionComponent = () => {
       <Route component={PageNotFound} />
      </Switch>
     </div>
- {/* </Router> */}
-  </BrowserRouter>
+ </Router>
+  // </BrowserRouter>
 
  )
 }
